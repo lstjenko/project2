@@ -1,0 +1,81 @@
+@charset "utf-8";
+/*
+    Project 2.2
+*/
+
+
+/* From 3.1 Reset Style Sheet -sets baseline settings */
+/* Structural Styles - assigns block style as display type */
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+   display: block;
+}
+
+
+/* Typographic Styles - sets default padding, margin, */
+/* & typographic properties */
+
+address,
+article,
+aside,
+blockquote,
+body,
+cite,
+div,
+dl,
+dt,
+dd,
+em,
+figcaption,
+figure,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+img,
+li,
+main,
+nav,
+ol,
+p,
+section,
+span,
+ul {
+   background: transparent;
+   font-size: 100%;
+   margin: 0;
+   padding: 0;
+   vertical-align: baseline;
+}
+
+
+/* removes list markers/underline from nav lists */
+
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+
+nav a {
+   text-decoration: none;
+}
+
+
+/* Base body line-height */
+
+body {
+   line-height: 1;
+}

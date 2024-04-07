@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+/*
+    Project 2.2
+*/
+
+/* From 3.1  */
+/* HTML and Body Styles */
+
+html {
+   background-color: lightslategray;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 	
+}
+
+body {
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 960px;
+   min-width: none;
+   width: 95%;
+   background-color: lavender;  
+}
+
+h1 {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: larger;
+   font-size: 2.2em;
+   line-height: 2.6em;
+   color: salmon;
+}
+
+h2 {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: larger;
+   font-size: 1.2em;
+   line-height: 1.6em;
+   font-weight: bold;
+   color: salmon;
+}
+
+body > header > img {
+   display: block;
+   width: 100%;
+}
+
+body > header > nav.horizontalNavigation li {
+   width: 20%;
+}
+
+img {
+   width: auto;
+   height: auto;
+}
+
+.photoLink {
+   width: 200px;
+   height: 200px;
+}
+
+
+/* Horizontal Navigation Styles */
+
+nav.horizontalNavigation li{
+   display: block;
+   float: left;
+}
+
+nav.horizontalNavigation a {
+   background-color: plum;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 1.4em;
+   line-height: 1.8em;
+   display: block;
+   text-align: center;
+}  
+
+nav.horizontalNavigation a:link, 
+nav.horizontalNavigation a:visited {
+   color: purple;
+}
+
+nav.horizontalNavigation a:hover, 
+nav.horizontalNavigation a:active {
+   background-color: lightpink;
+}   
+
+
+/* Right Column Styles */
+
+section#rightColumn {
+   float: left;
+   width: 40%;
+}
+
+section#rightColumn p {
+   color:darkgrey;
+   font-size: 0.9em;
+   line-height: 1.6em;
+}
+
+section#rightColumn > nav.horizontalNavigation li {
+   width: 25%;
+}
+
+/* Left Column Styles */
+section#leftColumn {
+   float: left;
+   width: 60%;
+}
+
+section#leftColumn img {
+   display: block;
+   width: 100%;
+}
+
+
+/* Footer Styles */
+
+body > footer {
+   font-size: 0.9em;
+   color: lightsalmon;
+}
+
+body > footer h1 {
+   color: lavender;
+   font-size: 1.1em;
+   font-weight: normal;
+   letter-spacing: 0.2em;
+   margin: 1em 0 0.5em 1em;
+}
+
+
+/* Contact Info Styles */
+
+section#contactInfo p {
+   line-height: 1.4em;
+   margin: 1em;
+}   
+
+
+/* Grid Styles for Page Body */
+
+body {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   grid-template-areas: "header  header"
+                        "intro     faq"
+                        "articles  faq"
+                        "footer   footer";
+   grid-column-gap: 15px;
+}
+
+body > header {
+   grid-row: 1;
+   grid-column: 1/-1;
+}
+
+body > article {grid-area: intro;}
+body > aside {grid-area: faq;}
+body > section {grid-area: articles;}
+body > footer {grid-area: footer;}
+
+
+/* Grid Styles for Nested Grid */
+
+section {
+   display: grid;
+   grid-template-columns: repeat(1, 2fr);
+}
+
+section>h1 {
+   grid-area: 1/1/2/3;
+} 
